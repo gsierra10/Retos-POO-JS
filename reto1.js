@@ -1,11 +1,18 @@
+const sexoDefecto = 'H'
+
 const Persona = class {
-    constructor(nombre, edad, DNI, peso, altura){
+    constructor(nombre, edad, DNI, peso, altura, sexo){
     this.nombre = nombre
     this.edad = edad
     this.DNI = DNI
     this.peso = peso
     this.altura = altura
-    this.sexo = 'H'
+    
+    if(sexo != ''){
+        this.sexo = sexo
+    } else{
+        this.sexo = sexoDefecto
+    }
     }
 }
 
